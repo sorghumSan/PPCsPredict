@@ -1,0 +1,5 @@
+server:
+  port: 8080
+
+flask:
+  url: http://10.131.18.140:5000
