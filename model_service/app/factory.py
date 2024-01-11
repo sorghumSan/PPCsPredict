@@ -1,8 +1,8 @@
 '''
 Author: gsl
 Date: 2024-01-04 15:06:28
-LastEditTime: 2024-01-05 09:52:31
-FilePath: /workspace/Flask/app/factory.py
+LastEditTime: 2024-01-09 15:59:36
+FilePath: /workspace/model_service/app/factory.py
 Description: 
 
 Copyright (c) 2024 by gsl, All Rights Reserved. 

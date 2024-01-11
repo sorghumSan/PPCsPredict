@@ -2,7 +2,7 @@
 Author: gsl
 Date: 2024-01-04 15:21:32
 LastEditTime: 2024-01-05 10:27:20
-FilePath: /workspace/Flask/app/ppc_predict/__init__.py
+FilePath: /workspace/model_service/app/ppc_predict/__init__.py
 Description: 
 
 Copyright (c) 2024 by gsl, All Rights Reserved. 

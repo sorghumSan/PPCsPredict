@@ -1,8 +1,8 @@
 '''
 Author: gsl
 Date: 2024-01-04 15:28:54
-LastEditTime: 2024-01-05 11:17:47
-FilePath: /workspace/Flask/app/ppc_predict/data_load.py
+LastEditTime: 2024-01-09 20:06:56
+FilePath: /workspace/model_service/app/ppc_predict/data_load.py
 Description: 
 
 Copyright (c) 2024 by gsl, All Rights Reserved. 
@@ -41,10 +41,16 @@ def feature_map(data):
         if feature not in data.keys():
             data[feature] = np.nan
         elif feature == 'Date_of_operation':
-            data[feature] = np.nan if data[feature] == "" else float(data[feature].replace('-',''))
+            data[feature] = np.nan if data[feature] == "" or data[feature] == None else float(data[feature].replace('-',''))
         else:
-            if data[feature]=='': data[feature] = np.nan
+            if data[feature]=='' or data[feature] == None : data[feature] = np.nan
             else: data[feature] = float(data[feature])
+    
+    # 30 seconds sampling interval*2 -> min
+    data['Longest_stirke_above_mean_value_of_MP'] *= 2
+    data['Longest_stirke_above_mean_value_of_CRS'] *= 2
+    data['Longest_stirke_below_mean_value_of_CRS'] *= 2
+    data['Longest_stirke_below_mean_value_of_MP'] *= 2
 
     return data
 

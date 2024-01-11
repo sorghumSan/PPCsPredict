@@ -29,9 +29,16 @@ a:focus {outline:0px solid}
 img {max-width:100%;height:auto}
 .fix {overflow:hidden}
 p {margin:0 0 15px;}
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
   margin: 0 0 10px;
   font-weight:700;
+}
+h4{
+	margin: 0 0 10px;
+	font-weight:700;
+	text-align: center;
+	color:white;
+	font-size: 15px;
 }
 a {transition: all 0.3s ease 0s;text-decoration:none;}
 a:hover{
@@ -290,6 +297,8 @@ ul.dtl-social li a{
     padding: 20px 0px;
     text-align: center;
 }
+
+
 .footer-copy-right p {
     margin: 0px;
     font-size: 15px;
@@ -3681,4 +3690,8 @@ input.show_placeholder:before{ content: attr(placeholder);}
 	left: 30px; /* 根据输入框的宽度和布局来调整位置 */
 	font-size: 20px; /* 调整字体大小 */
 	color: #FFFFFF; /* 可选：调整颜色 */
+}
+
+.center-text {
+	text-align: center;
 }

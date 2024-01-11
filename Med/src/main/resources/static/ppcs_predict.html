@@ -308,7 +308,7 @@
                             <option value="2">B</option>
                             <option value="3">O</option>
                             <option value="4">AB</option>
-                            <option value="5">Unknown</option>
+                            <option value="5">Not checked</option>
                           </select>
                         </div>
                         <div class="input-group mg-b-pro-edt">
@@ -322,7 +322,7 @@
                         </div>
                         <div class="input-group mg-b-pro-edt">
                           <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
-                          <input type="number" id="AUC_of_CRS" class="form-control" placeholder=" AUC of CRS">
+                          <input type="number" id="AUC_of_CRS" class="form-control" placeholder=" AUC of CRS (min*ml cmH₂O⁻¹)">
                         </div>
                         <div class="input-group mg-b-pro-edt">
                           <span class="input-group-addon"><i class="icon nalika-favorites-button" aria-hidden="true"></i></span>
@@ -336,7 +336,7 @@
                         <div class="input-group mg-b-pro-edt">
                           <span class="input-group-addon"><i class="icon nalika-favorites-button" aria-hidden="true"></i></span>
                           <select id="gender" class="form-control pro-edt-select form-control-primary">
-                            <option value="" selected disabled hidden>Gender</option>
+                            <option value="" selected disabled hidden>Sex</option>
                             <!--                                                                <option value="opt0">Gender</option>-->
                             <option value="1">Male</option>
                             <option value="2">Female</option>
@@ -376,11 +376,11 @@
                         </div>
                         <div class="input-group mg-b-pro-edt">
                           <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
-                          <input type="number" id="variance_of_P" class="form-control" placeholder=" Variance of ΔP">
+                          <input type="number" id="variance_of_P" class="form-control" placeholder=" Variance of ΔP (cmH₂O²)">
                         </div>
                         <div class="input-group mg-b-pro-edt">
                           <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
-                          <input type="number" id="Minimum_of_CRS" class="form-control" placeholder=" Minimum of CRS">
+                          <input type="number" id="Minimum_of_CRS" class="form-control" placeholder=" Minimum of CRS (ml cmH₂O⁻¹)">
                         </div>
                         <div class="input-group mg-b-pro-edt">
                           <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
@@ -399,15 +399,15 @@
                           <select id="hypertension_control" class="form-control pro-edt-select form-control-primary">
                             <!-- <option value="opt0">Hypertension control</option>-->
                             <option value="" selected disabled hidden>Hypertension control</option>
-                            <option value="0">Do not have high blood pressure</option>
-                            <option value="1">Regular control meets standards</option>
-                            <option value="2">Failure to regularly control compliance with standards</option>
+                            <option value="0">Without controll</option>
+                            <option value="1">Well-controlled</option>
+                            <option value="2">Poor-controlled</option>
                           </select>
                         </div>
 
                         <div class="input-group mg-b-pro-edt">
                           <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
-                          <input type="number" id="percentage_of_MP_value_exceeding_15_from_the_mean" class="form-control" placeholder=" Percentage of MP value exceeding 15% from the mean">
+                          <input type="number" id="percentage_of_MP_value_exceeding_15_from_the_mean" class="form-control" placeholder=" Percentage of MP value exceeding 15% from the mean (%)">
                         </div>
 
                       </div>
@@ -667,7 +667,6 @@
 <!--    </div>-->
 <!--  </div>-->
 
-  <div class="breadcome-area">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -677,7 +676,7 @@
                 <div class="breadcomb-wp">
 
                   <div class="breadcomb-ctn">
-                    <h2>The predicted probability is </h2>
+                    <h2>The predicted probability of PPCs is </h2>
                     <p style="font-size: 20px; color: #FFFFFF;" id="resultContainer"></p>
                   </div>
                 </div>
@@ -692,20 +691,23 @@
         </div>
       </div>
     </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="breadcome-list">
+          <div class="row">
+<!--            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">-->
+                  <h4>test</h4>
+                </div>
+<!--              </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-<!--  <div class="footer-copyright-area">-->
-<!--    <div class="container-fluid">-->
-<!--      <div class="row">-->
-<!--        <div class="col-lg-12">-->
-<!--          <div class="footer-copy-right">-->
-<!--            <p>Copyright © 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
 
 <!-- jquery
     ============================================ -->

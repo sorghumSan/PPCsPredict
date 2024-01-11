@@ -1,8 +1,8 @@
 '''
 Author: gsl
 Date: 2024-01-04 15:14:54
-LastEditTime: 2024-01-05 14:41:17
-FilePath: /workspace/Flask/app/ppc_predict/predict.py
+LastEditTime: 2024-01-10 19:57:25
+FilePath: /workspace/model_service/app/ppc_predict/predict.py
 Description: 
 
 Copyright (c) 2024 by gsl, All Rights Reserved. 
@@ -12,10 +12,17 @@ from flask import Flask, request, jsonify
 import _pickle as pkl
 import numpy as np
 from . import data_load 
+from flask_cors import CORS,cross_origin
+import json
 
 @ppc_bp.route('/predict', methods=['POST','GET'])
+@cross_origin()
+# @auth.login_required
+
 def predict():
-    parameters = request.form.to_dict()
+    print('--------------------')
+    parameters = eval(str(request.json))
+    print(parameters)
     
     X = data_load.load_data(parameters)
     
@@ -24,7 +31,7 @@ def predict():
     # 设置阈值 应对数据分布不均的问题
     threshold = 0.1
     for i in range(1,6):
-        with open(f'../model/ppcs_predict_model/XGBClassifier_{i}.pickle','rb') as f:  
+        with open(f'../model_service/model/ppcs_predict_model/XGBClassifier_{i}.pickle','rb') as f:  
             clf_load = pkl.load(f)  
             y_pred_prob_list.append(clf_load.predict_proba(X)[:,1]+threshold) 
       
